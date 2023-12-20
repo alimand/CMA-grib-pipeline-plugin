@@ -2,9 +2,11 @@
 grib2-pipeline-plugin
 
 # 1.	Related File
-a.universal.py
+a.universal.py,could be put in /wis2box/wis2box-management/wis2box/data
 
-b.data-mappings.yml
+b.data-mappings.yml,could be appended in /wis2box/tests/data/data-mappings.yml
+
+c.test data(10 files),first enter /wis2box/tests/data/observation, creatr a directory name: china,then put all the test data in it.
 
 # 2.	Source Code
 """create function: UniversalData，inherit wis2box.data.base.BaseAbstractData"""
@@ -16,9 +18,7 @@ Implement the transform method and fill in the output_data property, returning T
  	from pathlib import Path
  	import re
  	from typing import Union
- 	
  	from dateutil.parser import parse
- 	
  	from wis2box.data.base import BaseAbstractData
  	
  	LOGGER = logging.getLogger(__name__)
